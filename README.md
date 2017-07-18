@@ -1,4 +1,8 @@
-#Usage
+# Install
+
+`npm install`
+
+# Usage
 
 `./monitor.js /some/directory/1 /some/directory/2`
 
