@@ -20,11 +20,16 @@ function watchChanges(file) {
         fs.open(file, 'r', function (err, fd) {
             var offset = lastFileSize;
             var len = stats.size - lastFileSize;
+            if (len < 0){
+                return;
+            }
             var buffer = new Buffer(len);
-
             lastFileSize = stats.size;
             fs.read(fd, buffer, null, len, offset, function (a, b, buff) {
-                notify(file, buff.toString('utf-8'));
+                var newContent =  buff.toString('utf-8');
+                notify(file, newContent);
+
+                console.log(file+"\n"+newContent+"\n\n");
             });
         });
 

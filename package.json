@@ -1,0 +1,8 @@
+{
+  "name": "simple-file-watcher",
+  "version": "0.0.1",
+  "dependencies": {
+    "hound": "latest",
+    "node-notifier": "latest"
+  }
+}
