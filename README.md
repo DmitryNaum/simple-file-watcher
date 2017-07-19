@@ -2,6 +2,7 @@
 
 ```
 sudo apt-get install notify-osd
+npm install
 ```
 
 # Usage
